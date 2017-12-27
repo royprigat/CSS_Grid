@@ -2,15 +2,37 @@
     box-sizing: border-box;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+body {
+    background-color: rgb(230, 230, 230);
 }
 
-.grid div {
-    border: 1px solid rgb(0, 95, 107);
-    border-radius: 3px;
+header {grid-area: hd;}
+nav {grid-area: nav;}
+content {grid-area: cont;}
+footer {grid-area: ft;}
+
+.grid {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-areas: 
+    "hd"
+    "nav"
+    "cont"
+    "ft"
+}
+
+.grid header, nav, content, footer{
+    border-radius: 2px;
     background-color: rgba(0, 95, 107, 0.8);
-    padding: 0.2em;
+    padding: 0.5em;
     color: #fff;
+}
+
+@media (min-width: 375px) {
+    .grid {
+        grid-template-areas:
+        "hd hd hd"
+        "nav cont cont"
+        "ft ft ft"
+    }
 }
