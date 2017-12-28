@@ -1,38 +1,33 @@
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 body {
     background-color: rgb(230, 230, 230);
+    padding: 30px;
 }
 
-header {grid-area: hd;}
-nav {grid-area: nav;}
-content {grid-area: cont;}
-footer {grid-area: ft;}
+profile-pic {grid-area: pic;}
+about {grid-area: ab;}
+projects {grid-area: pr;}
+contact {grid-area: co;}
 
 .grid {
     display: grid;
     grid-gap: 2px;
     grid-template-areas: 
-    "hd"
-    "nav"
-    "cont"
-    "ft"
+    "pic pic . . . ."
+    "ab ab pr pr pr pr" 
+    "co co co co co co"
 }
 
-.grid header, nav, content, footer{
+.grid profile-pic, about, projects, contact {
     border-radius: 2px;
     background-color: rgba(0, 95, 107, 0.8);
     padding: 0.5em;
     color: #fff;
 }
 
-@media (min-width: 375px) {
+/* @media (max-width: 600px) {
     .grid {
-        grid-template-areas:
-        "hd hd hd"
-        "nav cont cont"
-        "ft ft ft"
+        grid-template-areas: "hd" "nav" "cont" "ft"
     }
-}
+} */
