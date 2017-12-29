@@ -1,33 +1,95 @@
-* {box-sizing: border-box;}
-
+html,
 body {
-    background-color: rgb(230, 230, 230);
-    padding: 30px;
+    background-color: #f7f7f7;
+    margin: 40px;
 }
 
-profile-pic {grid-area: pic;}
-about {grid-area: ab;}
-projects {grid-area: pr;}
-contact {grid-area: co;}
-
-.grid {
+.container {
     display: grid;
-    grid-gap: 2px;
-    grid-template-areas: 
-    "pic pic . . . ."
-    "ab ab pr pr pr pr" 
-    "co co co co co co"
+    grid-template: 200px 200px 200px 150px / repeat(12, 1fr);
+    grid-gap: 7px;
 }
 
-.grid profile-pic, about, projects, contact {
-    border-radius: 2px;
-    background-color: rgba(0, 95, 107, 0.8);
-    padding: 0.5em;
-    color: #fff;
+
+/* Pic */
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
 }
 
-/* @media (max-width: 600px) {
-    .grid {
-        grid-template-areas: "hd" "nav" "cont" "ft"
+
+/* About */
+
+.box2 {
+    grid-column-start: 5;
+    grid-column-end: 13;
+}
+
+
+/* Resume */
+
+.box3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4
+}
+
+
+/* Projects */
+
+.box4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.box5 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+}
+
+/* Design */
+
+.box6 {
+    grid-column-start: 5;
+    grid-column-end: 13;
+}
+
+/* Contact */
+
+.box7 {
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+
+.container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.container>div:nth-child(1n) {
+    background-color: #96ceb4;
+}
+
+.container>div:nth-child(3n) {
+    background-color: #88d8b0;
+}
+
+.container>div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+.container>div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-gap: 20px;
     }
-} */
+}
