@@ -1,0 +1,45 @@
+/* Hover Effects */
+
+.text {
+    background-color: rgb(223, 128, 128);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 16px 32px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.box4,
+.box5,
+.box6 {
+    transition: .3s ease-in-out;
+}
+
+.box4:hover,
+.box5:hover,
+.box6:hover {
+    background-color: rgba(117, 117, 117, 0.5);
+}
+
+.box4:hover > .text {
+    opacity: 1;
+}
+.box5:hover > .text {
+    opacity: 1;
+}
+.box6:hover > .text {
+    opacity: 1;
+}
+
+
+.image {
+    filter: grayscale(100%);
+}
+
+.frame {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+  

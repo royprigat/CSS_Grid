@@ -1,7 +1,8 @@
 html,
 body {
-    background-color: #f7f7f7;
+    background-color: #efefef;
     margin: 40px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -9,7 +10,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     grid-template: repeat(9, 100px) / repeat(12, 1fr);
-    grid-gap: 7px;
+    grid-gap: 12px;
     grid-template-areas:
     "h h h h h h h h h h h h" 
     "a a a a b b b b b b b b"
@@ -30,7 +31,7 @@ body {
     height: 100%;
     grid-area: a;
 }
-
+  
 
 /* About */
 
@@ -72,30 +73,18 @@ body {
 
 .box8 {
     grid-area: h;
+    background-color: rgb(94, 94, 94) !important;
 }
 
-
-/* Hover Effects */
-
-.box4,
-.box5,
-.box6 {
-    opacity: 1;
-    transition: .3s ease-in-out;
-}
-
-.box4:hover,
-.box5:hover,
-.box6:hover {
-    opacity: .6;
-}
 
 .container>div {
     display: flex;
+    background-color: rgb(202, 202, 202);
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    color: #ffeead;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #000000;
 }
 
 .container>div>img {
@@ -104,47 +93,7 @@ body {
     object-fit: cover;
 }
 
-.container>div:nth-child(1n) {
-    background-color: #96ceb4;
-}
-
-.container>div:nth-child(3n) {
-    background-color: #88d8b0;
-}
-
-.container>div:nth-child(2n) {
-    background-color: #ff6f69;
-}
-
-.container>div:nth-child(4n) {
-    background-color: #ffcc5c;
-}
 
 
-/* Small screens like Smartphones */
-
-@media (min-width: 120px) and (max-width: 650px) {
-    .container {
-        grid-template: 150px 250px 350px 350px 150px 150px 200px 150px / 1fr;
-        grid-gap: 7px;
-        grid-template-areas: "h" "a" "b" "c" "d" "e" "f" "g"
-    }
-}
-
-
-/* Medium sized screens like tablets or netbooks */
-
-@media (min-width: 651px) and (max-width: 1000px) {
-    .container {
-        grid-template: 100px 250px 300px 300px 100px / 1fr 1fr 1fr 1fr;
-        grid-gap: 7px;
-        grid-template-areas: 
-        "h h h h"
-        "a a c c"
-        "b b b b"
-        "f f d e"
-        "g g g g"
-    }
-}
 
 

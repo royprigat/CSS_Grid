@@ -1,0 +1,23 @@
+/* Small screens like Smartphones */
+
+@media (min-width: 120px) and (max-width: 650px) {
+    .container {
+        grid-template: 150px 250px 350px 350px 150px 150px 200px 150px / 1fr;
+        grid-template-areas: "h" "a" "b" "c" "d" "e" "f" "g"
+    }
+}
+
+
+/* Medium sized screens like tablets or netbooks */
+
+@media (min-width: 651px) and (max-width: 1000px) {
+    .container {
+        grid-template: 100px 250px 300px 300px 100px / 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h h h h"
+        "a a c c"
+        "b b b b"
+        "f f d e"
+        "g g g g"
+    }
+}
